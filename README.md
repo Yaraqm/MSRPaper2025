@@ -10,74 +10,26 @@ This repository contains the codebase for the paper titled **"Leveraging LLM Enh
 
 ## Repository Structure
 - `Fine_tuning_model.ipynb`: This file contains the code to fine tune the base llama model and create an adapter model.
-- ``: Scripts and files for data preprocessing.
-- `models/`: Model definitions and checkpoints (if available).
-- `experiments/`: Configurations and scripts for running experiments.
-- `results/`: Output files and logs from experiment runs.
-- `notebooks/`: Jupyter notebooks for data exploration, visualization, or analysis.
-- `README.md`: Repository documentation.
+- `Merge-models.ipynb`: This file allows you to merge the base model and adapter model you create to then use.
+- `Count Vectorization.py`: Contains code to be added to TCP-ML model to properly proccess and vectorize commit messages using the count vectorization technique.
+- `TF-IDF.py`: Contains code to be added to TCP-ML model to properly proccess and vectorize commit messages using the TF-IDF technique.
+- 'Duration.py': Contains code to be added to TCP-ML model in order to record duration metric for prioritized tests.
 
 ## Requirements
-To run the code in this repository, the following dependencies are required:
-
-- Python 3.x
-- Libraries: See `requirements.txt` for a full list of dependencies.
-  ```
-  pip install -r requirements.txt
-  ```
-
-**Optional**: Additional setup steps or dependencies for specific sections (e.g., GPU setup or specific data sources).
-
-## Data Preparation
-1. Download the dataset:
-   - Instructions on where to obtain the data (e.g., links to data sources).
-2. Preprocess the data:
-   - Run the following command to preprocess the dataset:
-     ```bash
-     python data/preprocess.py --input_path data/raw --output_path data/processed
-     ```
+- In order to run both ipynb files you will need an environment with a GPU.
 
 ## Usage
-### Training
-To train the model, run the following command:
-```bash
-python src/train.py --config configs/train_config.yaml
-```
+**Reference TCP-ML Model:** icst24 /HP Tuning SOTA 2023.ipynb
+- this is file contained within a public github repository named icst24.
 
-### Evaluation
-To evaluate the model on test data, run:
-```bash
-python src/evaluate.py --model_path models/checkpoint.pt --data_path data/processed/test
-```
+**Fine Tuning LLM:** In order to fine tune the LLM you will need a training set that contains a set of code diffs and corresponding examples of good commit messages. Once you have this, first go through the code in the Fine_tuning_model.ipynb, this will result in an adapter model. Once you have this adapter model you can go through the code in the Merge-models.ipynb file, this should result in a final usable fine-tuned model. 
 
-### Reproducing Results
-For reproducibility, all experiment configurations used in the paper are saved in the `experiments/` directory. Use these configurations to reproduce the experiments with the following command:
-```bash
-python src/run_experiment.py --config experiments/experiment1.yaml
-```
+Within the file there is a sample of the code used to enhance the commit messages as well ad the engineered prompt, this can be used to enhance your set of commit messages.
 
-## Results
-The main results, including metrics and figures, can be found in the `results/` directory. For further details, refer to our paper.
+**Implementing Messages as a Feature:** Once you have obtained your desired enhanced commit messages you will then need the above reference TCP-ML model. You can select which vectorization technique you would like to test (Count Vectorization or TF-IDF) and download the code from its corresponding python file. This code will need to be added to the reference TCP-ML model within the calcualte_afp_value(_) function. 
 
-## Citation
-If you use this code, please consider citing our work:
+Next you will need to take the duration code and add it within the same function in the corresponding area. Then you can run the model and obtain the apfd and duration values that are printed out. If you would like to get the base values as well simply do not include the commit messages as a feature.
 
-```
-@inproceedings{your_paper_citation,
-  title={Your Paper Title},
-  author={Author Name and Author Name},
-  booktitle={Conference Name, Year},
-  year={20XX}
-}
-```
 
 ## License
 This code is licensed under the [MIT License](LICENSE).
-
-## Contact
-For questions or collaboration inquiries, please contact:
-- **Primary Author**: your.email@example.com
-
----
-
-This template covers the essential information for readers to understand, install, and run the code, as well as reproduce results for a conference submission.
