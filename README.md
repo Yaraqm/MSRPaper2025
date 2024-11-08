@@ -13,7 +13,7 @@ This repository contains the codebase for the paper titled **"Leveraging LLM Enh
 - `Merge-models.ipynb`: This file allows you to merge the base model and adapter model you create to then use.
 - `Count Vectorization.py`: Contains code to be added to TCP-ML model to properly proccess and vectorize commit messages using the count vectorization technique.
 - `TF-IDF.py`: Contains code to be added to TCP-ML model to properly proccess and vectorize commit messages using the TF-IDF technique.
-- 'Duration.py': Contains code to be added to TCP-ML model in order to record duration metric for prioritized tests.
+- 'Durations.py': Contains code to be added to TCP-ML model in order to record duration metric for prioritized tests.
 
 ## Requirements
 - In order to run both ipynb files you will need an environment with a GPU.
@@ -28,7 +28,7 @@ Within the file there is a sample of the code used to enhance the commit message
 
 **Implementing Messages as a Feature:** Once you have obtained your desired enhanced commit messages you will then need the above reference TCP-ML model. You can select which vectorization technique you would like to test (Count Vectorization or TF-IDF) and download the code from its corresponding python file. This code will need to be added to the reference TCP-ML model within the calcualte_afp_value(_) function. 
 
-Next you will need to take the duration code and add it within the same function in the corresponding area. Then you can run the model and obtain the apfd and duration values that are printed out. If you would like to get the base values as well simply do not include the commit messages as a feature.
+Next you will need to take the durations code and add it within the same function in the corresponding area. Then you can run the model and obtain the apfd and duration values that are printed out. If you would like to get the base values as well simply do not include the commit messages as a feature.
 
 
 ## License
