@@ -1,4 +1,4 @@
-# MSR-2025--Yara
+# MSR-2025
 
 # Leveraging LLM Enhanced Commit Messages to Improve Machine Learning Based Test Case Prioritization
 
