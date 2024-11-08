@@ -30,6 +30,7 @@ Within the file there is a sample of the code used to enhance the commit message
 
 Next you will need to take the durations code and add it within the same function in the corresponding area. Then you can run the model and obtain the apfd and duration values that are printed out. If you would like to get the base values as well simply do not include the commit messages as a feature.
 
+To run the TCP-ML model you will need a dataset that includes these columns 'Test_Identifier', 'Execution_Count', 'Test_Total', 'Failure_Count', 'Failure_Rate', 'Last_Failure_Age', 'Last_Failure', 'Last_Transition', 'Transition_Count', '#Files_Changed', '#Lines_Inserted', '#Lines_Deleted'.
 
 ## License
 This code is licensed under the [MIT License](LICENSE).
