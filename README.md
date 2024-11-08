@@ -13,7 +13,7 @@ This repository contains the codebase for the paper titled **"Leveraging LLM Enh
 - `Merge-models.ipynb`: This file allows you to merge the base model and adapter model you create to then use.
 - `Count Vectorization.py`: Contains code to be added to TCP-ML model to properly proccess and vectorize commit messages using the count vectorization technique.
 - `TF-IDF.py`: Contains code to be added to TCP-ML model to properly proccess and vectorize commit messages using the TF-IDF technique.
-- 'Durations.py': Contains code to be added to TCP-ML model in order to record duration metric for prioritized tests.
+- `Durations.py`: Contains code to be added to TCP-ML model in order to record duration metric for prioritized tests.
 
 ## Requirements
 - In order to run both ipynb files you will need an environment with a GPU.
