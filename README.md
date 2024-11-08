@@ -5,11 +5,12 @@
 **Conference Submission:** [Mining Software Repositories (MSR), 2025]
 
 ## Overview
-This repository contains the codebase for the paper titled **"Your Paper Title"** submitted to **[Conference Name]**. This code is designed to reproduce the experiments and results presented in the paper, providing a full pipeline from data preprocessing to model evaluation.
+This repository contains the codebase for the paper titled **"Leveraging LLM Enhanced Commit Messages to Improve Machine Learning Based Test Case Prioritization
+"** submitted to **MSR2025**. This code is designed to assist in reproducing the experiments and results presented in the paper.
 
 ## Repository Structure
-- `src/`: Main source code for the project.
-- `data/`: Scripts and files for data preprocessing.
+- `Fine_tuning_model.ipynb`: This file contains the code to fine tune the base llama model and create an adapter model.
+- ``: Scripts and files for data preprocessing.
 - `models/`: Model definitions and checkpoints (if available).
 - `experiments/`: Configurations and scripts for running experiments.
 - `results/`: Output files and logs from experiment runs.
