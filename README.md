@@ -22,9 +22,9 @@ This repository contains the codebase for the paper titled **"Leveraging LLM Enh
 **Reference TCP-ML Model:** icst24 /HP Tuning SOTA 2023.ipynb
 - this is file contained within a public github repository named icst24.
 
-**Fine Tuning LLM:** In order to fine tune the LLM you will need a training set that contains a set of code diffs and corresponding examples of good commit messages. Once you have this, first go through the code in the Fine_tuning_model.ipynb, this will result in an adapter model. Once you have this adapter model you can go through the code in the Merge-models.ipynb file, this should result in a final usable fine-tuned model. 
+**Fine Tuning LLM:** In order to fine tune the LLM you will need a training set that contains a set of code diffs and corresponding examples of good commit messages. A small sample can be viewed here: https://zenodo.org/records/14060468. This link contains a subset of the training set we used to fine tune our model, due to size and organizational limitations we cannot publish the whole set, however, this sample can be used to indicate the format and structure needed. Once you have a training set, first go through the code in the Fine_tuning_model.ipynb, this will result in an adapter model. Once you have this adapter model you can go through the code in the Merge-models.ipynb file, this should result in a final usable fine-tuned model. 
 
-Within the file there is a sample of the code used to enhance the commit messages as well ad the engineered prompt, this can be used to enhance your set of commit messages.
+Within the file there is a sample of the code used to enhance the commit messages as well as the engineered prompt, this can be used to enhance your set of commit messages.
 
 **Implementing Messages as a Feature:** Once you have obtained your desired enhanced commit messages you will then need the above reference TCP-ML model. You can select which vectorization technique you would like to test (Count Vectorization or TF-IDF) and download the code from its corresponding python file. This code will need to be added to the reference TCP-ML model within the calcualte_afp_value(_) function. 
 
